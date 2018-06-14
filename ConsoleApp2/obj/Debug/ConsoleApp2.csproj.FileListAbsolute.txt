@@ -1,0 +1,7 @@
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

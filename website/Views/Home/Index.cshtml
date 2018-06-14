@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Text</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in ViewBag.Message)
+            {
+                <tr>
+                   <td>@item.Id</td>
+                    <td>@item.Date</td>
+                    <td>@item.Text</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table> 
