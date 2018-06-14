@@ -12,10 +12,11 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             string fullFilePath = AppDomain.CurrentDomain.BaseDirectory.Remove(AppDomain.CurrentDomain.BaseDirectory.Length - 22, 22) + "website\\App_Data\\Database1.mdf";
-            string endMessage = "You inputed blank, try again!";
+
             int repeaterValue = 1;
             while (repeaterValue != 0)
             {
+                string endMessage = "You inputed blank, try again!";
                 try
                 {
                     Console.WriteLine("Type message to send to website here:");
