@@ -1,9 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -19,28 +15,33 @@ namespace ConsoleApp2
                 string endMessage = "You inputed blank, try again!";
                 try
                 {
+                    
                     Console.WriteLine("Type message to send to website here:");
                     string text = Console.ReadLine();
                     DateTime date = DateTime.Now;
                     if (text != "")
                     {
-                        endMessage = string.Format("Success! saved: '{0} - {1}' to database", date, text);
-                        using (SqlConnection sqlCon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + fullFilePath))
+                        endMessage = "Text too long, 50 characters max!";
+                        if (text.Length <= 50)
                         {
-                            sqlCon.Open();
-                            SqlCommand cmd = sqlCon.CreateCommand();
-                            cmd.CommandType = System.Data.CommandType.Text;
-                            cmd.CommandText = "insert into table1 values(@date, @text)";
-                            cmd.Parameters.Add(new SqlParameter("@date", date));
-                            cmd.Parameters.Add(new SqlParameter("@text", text));
-                            cmd.ExecuteNonQuery();
+                            using (SqlConnection sqlCon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + fullFilePath))
+                            {
+                                sqlCon.Open();
+                                SqlCommand cmd = sqlCon.CreateCommand();
+                                cmd.CommandType = System.Data.CommandType.Text;
+                                cmd.CommandText = "insert into table1 values(@date, @text)";
+                                cmd.Parameters.Add(new SqlParameter("@date", date));
+                                cmd.Parameters.Add(new SqlParameter("@text", text));
+                                cmd.ExecuteNonQuery();
+                                endMessage = string.Format("Success! saved: '{0} - {1}' to database", date, text);
+                            }
                         }
                     }
                     Console.WriteLine(endMessage);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("något gick snett! felmeddelande: " + ex.Message);
+                    Console.WriteLine("Something went wrong! error message: " + ex.Message);
                 }
             }
         }

@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<button type="button" class="btn btn-primary" onclick="refresh()">Refresh page</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Text</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in ViewBag.Message)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Date</td>
+                    <td>@item.Text</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@{
+    if (Convert.ToInt32(Request.Params["pageNumber"]) - 1 >= 0)
+    {
+        @Html.ActionLink("Previous Page", "Index2", "Home", new { pageNumber = Convert.ToInt32(Request.Params["pageNumber"]) - 1 }, new { @class = "btn btn-primary" });
+    }
+    else
+    {
+        <button type="button" class="btn btn-primary" disabled>Previous Page</button>
+    }
+}
+&nbsp;
+@{
+    if (ViewBag.Message.Count == 15)
+    {
+        @Html.ActionLink("Next Page", "Index2", "Home", new { pageNumber = Convert.ToInt32(Request.Params["pageNumber"]) + 1 }, new { @class = "btn btn-primary" });
+    }
+    else
+    {
+        <button type="button" class="btn btn-primary" disabled>Next Page</button>
+    }
+}

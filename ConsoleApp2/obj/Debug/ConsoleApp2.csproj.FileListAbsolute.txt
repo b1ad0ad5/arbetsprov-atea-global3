@@ -5,3 +5,10 @@ F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyR
 F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
 F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.exe
 F:\VS projects\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+F:\GitHub\arbetsprov-atea-global\Arbetsprov Atea\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

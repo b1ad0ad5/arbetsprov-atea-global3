@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<button type="button" class="btn btn-primary" onclick="refresh()">Refresh page</button>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -15,11 +15,14 @@
             foreach (var item in ViewBag.Message)
             {
                 <tr>
-                   <td>@item.Id</td>
+                    <td>@item.Id</td>
                     <td>@item.Date</td>
                     <td>@item.Text</td>
                 </tr>
             }
         }
     </tbody>
-</table> 
+</table>
+<button type="button" class="btn btn-primary" disabled>Previous Page</button>
+&nbsp;
+@Html.ActionLink("Next Page", "Index2", "Home", new { pageNumber = Convert.ToInt32(Request.Params["pageNumber"]) + 1 }, new { @class = "btn btn-primary" })
