@@ -21,7 +21,7 @@ namespace website.Controllers
                     SqlCommand cmd = sqlCon.CreateCommand();
                     cmd.CommandType = System.Data.CommandType.Text;
                     
-                    cmd.CommandText = "select * from table1 order by 2 desc OFFSET " + 15 + " ROWS FETCH NEXT 15 ROWS ONLY";
+                    cmd.CommandText = "select * from table1 order by 2 desc OFFSET " + 0 + " ROWS FETCH NEXT 15 ROWS ONLY";
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -83,7 +83,7 @@ namespace website.Controllers
             }
             else
             {
-                return Redirect("/Home/Index2?pageNumber=1");
+                return Redirect("/Home/Index2?pageNumber=0");
             }
         }
     }
